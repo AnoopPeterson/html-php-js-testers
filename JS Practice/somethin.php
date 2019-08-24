@@ -12,14 +12,14 @@ $encoded = json_encode($x);
 </head>
 <body>
 
-<canvas id="test" width="500" height="500"></canvas>
 
 <script type="module" >
 	var x = <?php echo $encoded ?>;
-	import {hello} from './somethin_else.js';
+	import {hello, array_test, do_something} from './somethin_else.js';
+	array_test(x);
 	hello('world');
-	var canvas = document.getElementById('test');
-	var ctx = canvas.getContext('2d');
+	do_something(x);
+	var ctx = document.getElementById('wee').getContext('2d');
 	ctx.fillStyle = "rgb(255, 0, 0)";
 	let initx = 40;
 	let width = 30; // 30 px wide
@@ -29,6 +29,7 @@ $encoded = json_encode($x);
 		ctx.fillRect(initx, 10, width, height);
 		initx += width + spacing;
 	}
+
 </script>
 
 </body>
