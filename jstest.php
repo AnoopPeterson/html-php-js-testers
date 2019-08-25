@@ -5,6 +5,7 @@
 </head>
 <body>
 
-<script type="text/javascript" src="JS Practice/test.js"></script>
+<script type="module">
+</script>
 </body>
 </html>

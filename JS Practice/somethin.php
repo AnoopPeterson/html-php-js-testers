@@ -13,12 +13,14 @@ $encoded = json_encode($x);
 <body>
 
 
-<script type="module" >
-	var x = <?php echo $encoded ?>;
-	import {hello, array_test, do_something} from './somethin_else.js';
-	array_test(x);
-	hello('world');
-	do_something(x);
+<script type="text/javascript">
+
+
+	document.cookie = 'test=This is a test';
+
+	var x = document.cookie;
+
+	console.log(x);
 </script>
 
 </body>
