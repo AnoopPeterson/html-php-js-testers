@@ -16,7 +16,6 @@ $encoded = json_encode($x);
 <script type="text/javascript">
 
 
-	document.cookie = 'test=1000';
 function getCookie(cname) {
 	var name = cname + '=';
 	var decodedCookie = decodeURIComponent(document.cookie);
@@ -36,6 +35,10 @@ function getCookie(cname) {
 var cookie = getCookie('test');
 console.log(typeof Number(cookie));
 console.log(Number(cookie) + 100);
+
+for (var i = 0; i < 10; i++){
+	console.log(i);
+}
 </script>
 
 </body>
